@@ -1,4 +1,4 @@
-package StepDefinitions;
+package StepDefinitions;																		initions;
 
 import org.junit.runner.RunWith;
 import io.cucumber.junit.CucumberOptions;
@@ -12,7 +12,7 @@ plugin={"pretty","html:target/HtmlReports",
 		"json:target/JSONReports/report.json",
 		"junit:target/JUnitReports/report.xml"},
 publish = true,
-tags="@smokeTest"
+tags="@SmokeTest1"
 )
 
 public class Runner {
