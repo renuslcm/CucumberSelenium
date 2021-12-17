@@ -4,17 +4,24 @@ Feature: Login workflow
 
   @smokeTest
   Scenario: Login to the application
-    Given User enters username and password
+    Given Open chrome browser
+    And Launch the application
+    Given User enter username and password
     When Click login button
     Then The applicaiton is opened
-  #@SmokeTest
-  #Scenario Outline: Login to the application
-    #Given User enters <username> and <password>
-    #When Click login button
-    #Then The applicaiton is opened
-#
-    #Examples: 
-      #| username      | password  |
-      #| bpl.feeearner | SHMA@1234 |
+    And Log out from the application
+
+  @SmokeTest1
+  Scenario Outline: Login to the application
+    Given Open chrome browser
+    Given Launch the application
+    Given User enters <username> and <password>
+    When Click login button
+    Then The applicaiton is opened
+    And Log out from the application
+
+    Examples: 
+      | username      | password  |
+      | bpl.feeearner | SHMA@1234 |
       #| bpl.partner   | SHMA@1234 |
       #| bpl.admin     | SHMA@1234 |
