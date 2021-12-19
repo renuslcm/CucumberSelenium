@@ -12,7 +12,7 @@ plugin={"pretty","html:target/HtmlReports",
 		"json:target/JSONReports/report.json",
 		"junit:target/JUnitReports/report.xml"},
 publish = true,
-tags="@SmokeTest1"
+tags="@SmokeTest"
 )
 
 public class Runner {

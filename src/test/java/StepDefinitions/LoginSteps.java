@@ -27,7 +27,7 @@ public class LoginSteps {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		System.out.println("Hurray");
+		System.out.println("Opened Chrome Browser Successfully");
 		
 	}
 	@And("Launch the application")
@@ -61,19 +61,20 @@ public class LoginSteps {
 	public void the_applicaiton_is_opened() {
 		home = new homePage(driver);
 		home.validateWelcome();
-		
-		
+	}
+	
+	@And("Validate the tasks")
+	public void validate_the_tasks() {
+		home = new homePage(driver);
+		home.clickFirstTask();
+	
 	}
 	@And("Log out from the application")
 	public void log_out_from_the_app() {
 		home = new homePage(driver);
 		home.clickOpenUserOptionMenu();
 		home.clickLogout();
-		
-		//driver.findElement(By.xpath("//a[@aria-label='Open user options menu']")).click();  
-		//driver.findElement(By.xpath("(//div[@class='UserProfileLayout---current_user_actions']//div//div//button)[3]")).click();
-		driver.close();
-		driver.quit();
+
 	}
 	
 	

@@ -2,13 +2,14 @@
 Feature: Login workflow
   Login workflow for 3 different kinds of users
 
-  @smokeTest
+  @SmokeTest
   Scenario: Login to the application
     Given Open chrome browser
     And Launch the application
     Given User enter username and password
     When Click login button
     Then The applicaiton is opened
+    And Validate the tasks
     And Log out from the application
 
   @SmokeTest1
@@ -23,5 +24,5 @@ Feature: Login workflow
     Examples: 
       | username      | password  |
       | bpl.feeearner | SHMA@1234 |
-      #| bpl.partner   | SHMA@1234 |
-      #| bpl.admin     | SHMA@1234 |
+      | bpl.partner   | SHMA@1234 |
+      | bpl.admin     | SHMA@1234 |
