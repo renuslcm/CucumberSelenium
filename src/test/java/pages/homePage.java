@@ -9,7 +9,7 @@ public class homePage {
 	private By btn_logout = By.xpath("(//div[@class='UserProfileLayout---current_user_actions']//div//div//button)[3]");
 	private By menu_OpenUserOptionMenu = By.xpath("//a[@aria-label='Open user options menu']");
 	private By lbl_welcome = By.xpath("//*[contains(text(),'Welcome')]");
-	
+	private By link_Task1 = By.xpath("(//*[@class='AccentText---color_accent']//a)[1]");
 	public homePage(WebDriver driver) {
 		this.driver= driver; 
 //		if(!driver.getTitle().contains("TEST")) {
@@ -30,6 +30,12 @@ public class homePage {
 	{
 		driver.findElement(menu_OpenUserOptionMenu).click();
 	}
+	public void clickFirstTask()
+	{
+		driver.findElement(link_Task1).click();
+	}
+	
+	
 	
 
 }

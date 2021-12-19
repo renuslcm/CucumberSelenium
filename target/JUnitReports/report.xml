@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="11.102">
-    <testcase classname="Login workflow" name="Login to the application" time="10.92">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.823">
+    <testcase classname="Login workflow" name="Login to the application" time="9.654">
         <system-out><![CDATA[Given Open chrome browser...................................................passed
-Given Launch the application................................................passed
-Given User enters bpl.feeearner and SHMA@1234...............................passed
+And Launch the application..................................................passed
+Given User enter username and password......................................passed
 When Click login button.....................................................passed
 Then The applicaiton is opened..............................................passed
+And Validate the tasks......................................................passed
 And Log out from the application............................................passed
 ]]></system-out>
     </testcase>
